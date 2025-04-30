@@ -3,7 +3,7 @@ FROM docker.arvancloud.ir/node:23-alpine AS base
 # Install SSH server and other necessary packages
 RUN apk add --no-cache openssh bash git
 
-COPY ./linux/package.json /apps/package.json
+COPY ./linux/package.json /apps/main/package.json
 
 COPY ./linux/node /apps/linux/node
 
