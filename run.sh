@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [[ ! -d "/apps/main/$block/.next" ]] || [[ "$rebuild" == "true" ]]; then
+if [[ ! -d "/apps/main/repo/$block/.next" ]] || [[ "$rebuild" == "true" ]]; then
     # echo "Cloning github token:${githubtoken}"
 
     echo 'Hi! Welcome to QE Auto publisher!'
