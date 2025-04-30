@@ -5,18 +5,18 @@ if [[ ! -d "/apps/main/$block/.next" ]] || [[ "$rebuild" == "true" ]]; then
 
     echo 'Hi! Welcome to QE Auto publisher!'
 
-    git clone -n --filter=tree:0 --sparse ${giturl} /apps/main
+    git clone -n --filter=tree:0 --sparse ${giturl} /apps/main/repo
     sleep 1
-    cd /apps/main
+    cd /apps/main/repo
     git sparse-checkout init --no-cone                        
     git sparse-checkout set /${block}/
     git checkout master
 
-    cp -r /apps/linux/node /apps/main/${block}/node_modules
+    cp -r /apps/linux/node /apps/main/repo/${block}/node_modules
 
     sleep 1
 
-    cd /apps/main/${block}
+    cd /apps/main/repo/${block}
 
     sleep 1
 
@@ -29,7 +29,7 @@ if [[ ! -d "/apps/main/$block/.next" ]] || [[ "$rebuild" == "true" ]]; then
     sleep 1
 fi
 
-cd /apps/main/${block}
+cd /apps/main/repo/${block}
 
 yarn start
 
