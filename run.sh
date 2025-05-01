@@ -20,8 +20,6 @@ if [[ ! -d "/apps/main/repo/$block/.next" ]] || [[ "$rebuild" == "true" ]]; then
 
     sleep 1
 
-    ls
-
     echo 'Building XOXO ;)'
 
     yarn build
