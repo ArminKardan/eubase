@@ -29,6 +29,8 @@ fi
 
 cd /apps/main/repo/${block}
 
+node -e "setTimeout(async ()=>{await fetch("http://127.0.0.1:3000/fa")},3000)"
+
 yarn start
 
 echo 'Nextjs crashed :-('
