@@ -33,6 +33,6 @@ node -e "setTimeout(async ()=>{ await fetch('http://127.0.0.1:3000/start') },100
 
 yarn start
 
-echo 'Nextjs crashed :-('
+echo 'Block crashed :-('
 
 node -e "setInterval(()=>{},1000)"
